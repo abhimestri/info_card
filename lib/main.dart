@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget{
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Center(
                 child: CircleAvatar(
@@ -29,22 +30,88 @@ class MyApp extends StatelessWidget{
                   backgroundImage: AssetImage("images/space.jpg"),
                 ),
               ),
-              Center(
-                child: Container(
-                  color: Colors.white,
-                  width: double.infinity,
-                  height: 100,
-                  margin: EdgeInsets.symmetric(vertical:
-                  20, horizontal: 30),
-                  child: Center(
-                    child: Text(
-                      "Abhishek Mestri",
-                      style: TextStyle(
-                        fontFamily: 'Tegomin',
-                        fontSize: 25
+              Container(
+                child : Column(
+                  children: [
+                    Center(
+                      child: Card(
+                        color: Colors.white,
+                        margin: EdgeInsets.symmetric(vertical:
+                        20, horizontal: 30),
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Text(
+                              "Abhishek Mestri",
+                              style: TextStyle(
+                                  fontFamily: 'Tegomin',
+                                  fontSize: 25
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    Card(
+                        color: Colors.white,
+                        margin: EdgeInsets.symmetric(vertical: 20,horizontal: 30),
+                        child : Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.phone,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "+91 8877990011",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Tegomin'
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                    ),
+                    Card(
+                        color: Colors.white,
+                        margin: EdgeInsets.symmetric(vertical: 20,horizontal: 30),
+                        child:Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.email,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "flutter_project@gmail.com",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Tegomin'
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                    ),
+                  ],
+                )
+              ),
+              Center(
+                child: Text(
+                  "Thank You",
+                  style : TextStyle(
+                    fontSize: 45,
+                    fontFamily: 'Tegomin',
+                  )
                 ),
               )
             ],
